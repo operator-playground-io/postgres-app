@@ -1,14 +1,14 @@
 {
   "name": "Postgresql Container App",
   "description": "Install Postgres DB and try out CRUD operations on it using a React Js application",
-  "logo": "_images/PostgreSQL.png",
+  "logo": "_images/PostgreSQL-logo.png",
   "has_supporting_content": true,
   "stack_id": "Postgresql_Container_App-course_1655282272236",
   "type": "Course",
   "Categories": [
     "Containerization"
   ],
-  "source_repo": "",
+  "source_repo": "https://github.com/operator-playground-io/postgres-app.git",
   "cover": "cover.md",
   "use_explorer_dataset": false,
   "use_catalog_dataset": "",
