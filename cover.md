@@ -1,0 +1,1 @@
+Create a Postgres DB using certified images and try CRUD Operations using a simple  UI

@@ -1,0 +1,38 @@
+{
+  "name": "Postgresql Container App",
+  "description": "Install Postgres DB and try out CRUD operations on it using a React Js application",
+  "logo": "_images/PostgreSQL.png",
+  "has_supporting_content": true,
+  "stack_id": "Postgresql_Container_App-course_1655282272236",
+  "type": "Course",
+  "Categories": [
+    "Containerization"
+  ],
+  "source_repo": "",
+  "cover": "cover.md",
+  "use_explorer_dataset": false,
+  "use_catalog_dataset": "",
+  "is_s3_type": false,
+  "meta": {
+    "Install Time": [
+      "20 minutes"
+    ],
+    "Type": [
+      "Course"
+    ],
+    "Categories": [
+      "Containerization"
+    ],
+    "Catalog Id": [
+      "Postgresql_Container_App-course_1655282272236"
+    ],
+    "Contact": []
+  },
+  "display": [
+    {
+      "name": "Developer Dashboard",
+      "url": "##DNS.host##/codeserver",
+      "enabled": true
+    }
+  ]
+}

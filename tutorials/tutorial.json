@@ -1,0 +1,40 @@
+{
+  "name": "Setup Postgres DB app",
+  "appLayout": "accordion",
+  "appTheme": "g90",
+  "footer": "footer.md",
+  "tutorials": [
+    {
+      "description": "Create storage and pods for PostgresDB",
+      "duration": "5 mins",
+      "title": "Setup Postgres DB",
+      "tutorial_name": "Setup-Postgres-DB.md"
+    },
+    {
+      "description": "Setup ReactJS application ",
+      "duration": "10 mins",
+      "title": "Setup ReactJS app",
+      "tutorial_name": "Setup-ReactJS-app.md"
+    },
+    {
+      "description": "Try creating, deleting, updating records in the DB using the app's UI",
+      "duration": "5 mins",
+      "title": "Test the DB",
+      "tutorial_name": "Test-the-DB.md"
+    }
+  ],
+  "usefulLinks": [
+    {
+      "description": "",
+      "url": "",
+      "title": ""
+    }
+  ],
+  "demos": [
+    {
+      "description": "",
+      "url": "",
+      "title": ""
+    }
+  ]
+}
