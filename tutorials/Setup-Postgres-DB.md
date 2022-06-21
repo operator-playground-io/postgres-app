@@ -1,11 +1,13 @@
 ### Initialize variables
 
-Execute the below commnds to initialize the variables. 
+Execute the below commnds to initialize the variables and create the directories. 
 
 **Note:** If you refresh the lab then, initialise the variables and then proceed to Step where you left.
 
 ```execute
-export ip_addr=$(ifconfig eth1 | grep inet | awk '{print $2}' | cut -f2 -d:)
+mkdir -p /home/student/code-server/postgresql-application
+cd /home/student/code-server/postgresql-application
+export ip_addr=$(ifconfig eth0 | grep inet | awk '{print $2}' | cut -f2 -d:)
 echo $ip_addr
 ```
 
@@ -135,11 +137,3 @@ EOF
 ```execute
 kubectl apply -f service.yaml
 ```
-
-### 6 - Verify the Database setup 
-
-Check the connection to the Database
-
-```execute
-port=$(kubectl get svc contacts -n pgo -o custom-columns=:spec.ports[0].nodePort | tail -1)
-nc -z -v -w30 $ip_addr $port
