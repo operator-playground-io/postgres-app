@@ -50,13 +50,6 @@ Execute the below command. The result should have deployments for Database, back
 kubectl get deployments -n pgo
 ```
 
-Check the URL in the browser
-Follow the URL: http://##SSH.host##:30456
 
-### 6 - Cleanup
 
-Delete the setup
-```execute
-sudo /usr/local/bin/skaffold delete -n pgo
-```
 
