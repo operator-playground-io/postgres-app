@@ -22,10 +22,10 @@ rm -rf /home/student/code-server/crunchy-postgres-sample/k8s/contacts-service.ya
 cd /home/student/code-server/crunchy-postgres-sample/k8s && sed -i "s|contacts-db.pgo.svc.cluster.local|contacts|" contacts-backend.deployment.yaml && sed -i "s|contacts.pgo.svc.cluster.local|contacts|" contacts-backend.deployment.yaml
 echo "" >> contacts-frontend.deployment.yaml
 echo '        - name: REACT_APP_SERVER_URL' >> contacts-frontend.deployment.yaml 
-echo "          value: \"http://##SSH.host##:30456/contacts\"" >> contacts-frontend.deployment.yaml
+echo "          value: \"http://##SSH.host##:30102/contacts\"" >> contacts-frontend.deployment.yaml
 
 
-cd /home/student/code-server/crunchy-postgres-sample/frontend && export backend_port=30456 && sed -i "s|ip|##SSH.host##|" .env && sed -i "s|port|$backend_port|" .env
+cd /home/student/code-server/crunchy-postgres-sample/frontend && export backend_port=30102 && sed -i "s|ip|##SSH.host##|" .env && sed -i "s|port|$backend_port|" .env
 sudo /usr/local/bin/skaffold config set default-repo localhost:5000
 ```
 
@@ -40,7 +40,8 @@ sudo /usr/local/bin/skaffold run -n pgo
 Patch the service to use the port that is open.
 
 ```execute
-kubectl patch service frontend -n pgo --patch '{"spec": {"ports": [ {"nodePort": 30100 , "port": 3000}]}}'
+kubectl patch service frontend -n pgo --patch '{"spec": {"ports": [ {"nodePort": 30101 , "port": 3000}]}}'
+kubectl patch service backend -n pgo --patch '{"spec": {"ports": [ {"nodePort": 30102 , "port": 4000}]}}'
 ```
 
 ### 3 - Verify the setup is complete

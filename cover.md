@@ -1,5 +1,3 @@
-Create a Postgres DB using certified images and try CRUD Operations using a simple  UI
-
 <h1 align="center">PostgreSQL application container</h1> 
 
 ![Logo](_images/PostgreSQL-logo.png)
